@@ -1,4 +1,4 @@
-baseURL = "http://nokola.github.io/"
+baseURL = "https://nokola.github.io/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "ananke"
