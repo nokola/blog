@@ -1,0 +1,1 @@
+hugo server -wD -d %temp%/dev
