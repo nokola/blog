@@ -1,1 +1,1 @@
-hugo server -wD -d %temp%/dev
+hugo server --verbose -wD -d %temp%/dev
