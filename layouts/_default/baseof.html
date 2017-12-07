@@ -39,7 +39,19 @@
   </head>
 
   <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-near-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
-
+    <style>
+      .shadow-bottom {
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(175, 175, 175, 1);
+        -moz-box-shadow:    0px 0px 15px 0px rgba(175, 175, 175, 1);
+        box-shadow:         0px 0px 15px 0px rgba(175, 175, 175, 1);
+      }
+      .pad-2 {
+        padding: 2px 0;
+      }
+      .sub-space {
+        letter-spacing: 0.4px;
+      }
+    </style>
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
     <main class="pb7" role="main">
       {{ block "main" . }}{{ end }}
