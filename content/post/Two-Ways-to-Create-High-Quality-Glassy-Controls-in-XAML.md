@@ -1,0 +1,21 @@
+---
+title: "Two Ways to Create High-Quality Glassy Controls in XAML"
+date: 2009-09-12T01:26:00.0000000
+draft: false
+featured_image: ""
+---
+
+<p>&nbsp;<span style="font-family: &quot;MS Reference Sans Serif&quot;,&quot;sans-serif&quot;; font-size: 9pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: Arial;">&ldquo;<em style="mso-bidi-font-style: normal;">However, there is one design trick that I'd&nbsp;love to master to give my applications that killer look -- the ability to give a control, be that a logo, a menu bar, or whatever, the ultra-glossy appearance, and especially the appearance that I've seen in these water ripples applications of the control having a shiny layer of water on them..&nbsp; I don't necessarily need to achieve the ripple effect, but I'd love to know how to achieve the water layer appearance.</em>&rdquo;</span></p>
+<p class="MsoNormal" style="margin: 0in 0in 0pt;">&nbsp;</p>
+<p class="MsoNormal" style="margin: 0in 0in 0pt;"><span style="font-family: &quot;MS Reference Sans Serif&quot;,&quot;sans-serif&quot;; font-size: 9pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: Arial;">After receiving this in my e-mail box few days ago, I dug out two really amazing tutorials:</span></p>
+<p class="MsoNormal" style="margin: 0in 0in 0pt;"><span style="font-family: &quot;MS Reference Sans Serif&quot;,&quot;sans-serif&quot;; font-size: 9pt;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin: 0in 0in 0pt;"><span style="font-family: &quot;MS Reference Sans Serif&quot;,&quot;sans-serif&quot;; font-size: 9pt;"><a href="http://advertboy.wordpress.com/2007/11/09/blend-candy-another-blue-glowing-glass-button-in-the-style-of-web-20/">Blend Candy: Another Blue Glowing Glass Button in the style of Web 2.0</a></span></p>
+<p class="MsoNormal" style="margin: 0in 0in 0pt;"><span style="font-family: &quot;MS Reference Sans Serif&quot;,&quot;sans-serif&quot;; font-size: 9pt;">by LiquidBoy</span></p>
+<p class="MsoNormal" style="margin: 0in 0in 0pt;">&nbsp;</p>
+<p class="MsoNormal" style="margin: 0in 0in 0pt;"><span style="font-family: &quot;MS Reference Sans Serif&quot;,&quot;sans-serif&quot;; font-size: 9pt;"><a href="http://blogs.msdn.com/mgrayson/archive/2007/02/16/creating-a-glass-button-the-complete-tutorial.aspx">Creating a Glass Button: The Complete Tutorial</a></span></p>
+<p class="MsoNormal" style="margin: 0in 0in 0pt;"><span style="font-family: &quot;MS Reference Sans Serif&quot;,&quot;sans-serif&quot;; font-size: 9pt;">by Martin Grayson</span></p>
+<p class="MsoNormal" style="margin: 0in 0in 0pt;"><strong style="mso-bidi-font-weight: normal;"><span style="font-family: &quot;MS Reference Sans Serif&quot;,&quot;sans-serif&quot;; font-size: 9pt;">After clicking the above link,</span></strong><span style="font-family: &quot;MS Reference Sans Serif&quot;,&quot;sans-serif&quot;; font-size: 9pt;"> <strong style="mso-bidi-font-weight: normal;">remember to check attachment CreatingTheGlassButton.zip that contains the actual complete tutorial</strong> <span style="font-family: &quot;MS Reference Sans Serif&quot;,&quot;sans-serif&quot;; color: black; font-size: 9pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';">on how to achieve the effect step-by-step in Blend.</span></span></p>
+<p><span style="font-family: &quot;MS Reference Sans Serif&quot;,&quot;sans-serif&quot;; font-size: 9pt;"><span style="font-family: &quot;MS Reference Sans Serif&quot;,&quot;sans-serif&quot;; color: black; font-size: 9pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"><span style="font-family: &quot;MS Reference Sans Serif&quot;,&quot;sans-serif&quot;; color: black; font-size: 9pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';">This is the image from Martin's blog, just to get you hooked up!&nbsp;</span></span></span></p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin: 0in 0in 0pt;"><img src="/2009%2f9%2fglass.png" alt="" /></p>
+<p class="MsoNormal" style="line-height: normal; margin: 0in 0in 10pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto;">&nbsp;&nbsp;</p>

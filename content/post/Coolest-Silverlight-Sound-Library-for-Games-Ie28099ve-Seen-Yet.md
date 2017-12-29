@@ -1,0 +1,8 @@
+---
+title: "Coolest Silverlight Sound Library for Games I’ve Seen Yet"
+date: 2010-06-10T19:42:19.0000000
+draft: false
+featured_image: ""
+---
+
+<p>Quite amazing demo: <a title="http://prefix.teddywino.com/post/SilverlightMediaKitLiveDemo.aspx" href="http://prefix.teddywino.com/post/SilverlightMediaKitLiveDemo.aspx">http://prefix.teddywino.com/post/SilverlightMediaKitLiveDemo.aspx</a>&#160;</p>  <p>The library has a lot of potential for Silverlight games. It does MP3 decoding in managed code and exposes some cool controls like Pitch, Echo. Duet is my favorite. I’m also a Transformers fan and like how Duet makes explosion and swoosh sounds sound “Transformerish”.</p>  <p>I believe it should solve the “short sound” and “looping music” issues with Silverlight without any problem :). The biggest coolness though is that you can now simulate doppler effects and have more “rich” sound in smaller package (for example, by keeping only one explosion.mp3 and varying the pitch slightly).</p>  <p>The CPU usage on my quad core q6600 is ~1-2% of one core for most of the effects. 11% for the Pitch and 8% for the duet.</p>  <p>You can download the source code here: <a title="http://salusemediakit.codeplex.com/" href="http://salusemediakit.codeplex.com/">http://salusemediakit.codeplex.com/</a> (MIT License)</p>  <p><strong>Edit: </strong>another library, just released under CDDL License: <a title="http://vorbisplayer.codeplex.com/" href="http://vorbisplayer.codeplex.com/">http://vorbisplayer.codeplex.com/</a></p>
