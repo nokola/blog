@@ -5,6 +5,6 @@ theme = "ananke"
 
 [params]
     graphCommentId = "nokola-blog"
-    subtitle = "Design, Coding, and Special Effects"
+    subtitle = "Design, coding, and special effects"
     featured_image = "header/tree1.jpg"
     body_classes = "baskerville  bg-near-white"
