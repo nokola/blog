@@ -1,20 +1,21 @@
 {{ $featured_image := .Params.featured_image }}
 <article class="bb b--black-10">
-    <div class="db pb4 pt3 ph3 ph0-l no-underline dark-gray">
+    <div class="db pb4 {{ if .Params.featured_image }} pt3{{ end }} ph3 ph0-l no-underline dark-gray">
       <div class="flex flex-column flex-row-ns">
-        {{ if .Params.featured_image }} 
-        {{/* Trimming the slash and adding absURL make sure the image works no matter where our site
-        lives */}} 
-        {{ $featured_image := (trim $featured_image "/") | absURL }}
-        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-          <a href="{{.URL}}" class="db grow">
-            <img src="{{ $featured_image }}" class="img" alt="image from {{ .Title }}">
-          </a>
+        
+        <div class="pr3-ns {{ if .Params.featured_image }} mb3{{ end }} mb0-ns w-100 w-40-ns">
+            <a href="{{.URL}}" class="db grow">
+                {{ if .Params.featured_image }} 
+                {{/* Trim slash, add absURL to ensure image works no matter where site is */}} 
+                {{ $featured_image := (trim $featured_image "/") | absURL }}
+                  <img src="{{ $featured_image }}" class="img" alt="image from {{ .Title }}">
+                  {{ end }}
+                </a>
         </div>
-        {{ end }}
-        <div class="blah w-100{{ if .Params.featured_image }} w-60-ns pl3-ns{{ end }}">
+
+        <div class="w-100 w-60-ns pl3-ns">
           <a href="{{.URL}}" class="link hover-bg-moon-gray">
-            <h1 class="f3 fw1 athelas mv0 lh-title">
+            <h1 class="f4 fw1 athelas mv0 lh-title">
               {{ .Title }}
             </h1>
             {{ if .Date }}

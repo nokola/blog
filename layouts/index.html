@@ -22,7 +22,7 @@
 
       {{ $n_posts := $.Param "recent_posts_number" | default 3 }}
 
-      <section class="w-100 mw8">
+      <section class="w-100 mw8 center">
         {{/* Range through the first $n_posts items of the section */}}
         {{ range (first $n_posts $section) }}
           <div class="relative w-100 mt1 mb4">
@@ -32,15 +32,18 @@
       </section>
 
       {{ if ge $section_count (add $n_posts 1) }}
-      <section class="w-100 ph3 ph0-l">
+      <section class="w-100 ph3 ph0-l mw8 center">
         <h1 class="f3">All Remaining Posts</h1>
         {{/* Now, range through the next four after the initial $n_posts items. Nest the requirements, "after" then "first" on the outside */}}
         {{ range (after $n_posts $section)  }}
-          <h2 class="f5 fw4 mb4 mr3">
-            <a href="{{ .URL }}" class="link dim">
-              {{ .Title }} ...
-            </a>
-          </h2>
+        <a href="{{ .URL }}" class="linkunder db pb3 mr3">
+            <span class="f5 fw4">
+              {{ .Title }}
+            </span>{{ if .Date }}
+            <span class="f6 dib mid-gray">({{ .Date.Format "Jan, 2006" }})
+            </span>
+            {{ end }}
+        </a>
         {{ end }}
 
         {{/* As above, Use $section_name to get the section title, and URL. Use "with" to only show it if it exists */}}

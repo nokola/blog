@@ -6,7 +6,7 @@
 {{ define "main" }}
 <div class="flex-l mt2 mw8 center">
  <article class="center cf pt4 pb1  ph3 ph4-ns mw10">
-     <h1 class="f2 mt0 athelas">
+     <h1 class="f4 mt0 athelas">
      {{ .Title }}
      </h1>
      <time class="f6  pb1 dib mid-gray normal" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
@@ -15,7 +15,7 @@
 
      {{/* TODO: Add Hugo author  */}}
      {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
-   <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray">
+   <section class="nested-copy-line-height lh-copy serif f6 nested-links nested-img mid-gray">
      {{ .Content }}
    </section>
    {{ partial "tags.html" . }}
