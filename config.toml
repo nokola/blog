@@ -1,11 +1,11 @@
-baseURL = "https://nokola.github.io/"
+baseURL = "https://systemfailure.io/"
 languageCode = "en-us"
-title = "You Had Me At 'Hello World'"
+title = "SYSTEM FAILURE"
 theme = "ananke"
 
 [params]
     graphCommentId = "nokola-blog"
-    subtitle = "Design, coding, and special effects"
+    subtitle = "Working with humans. Design, coding, effects. Product administration and care."
     featured_image = "header/tree1.jpg"
     body_classes = "body-font bg-white"
     date_format = "Jan 2, 2006"
