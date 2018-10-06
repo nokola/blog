@@ -4,10 +4,11 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="flex-l mt2 mw6 center"> 
+<div class="flex-l mt2 mw8 center"> 
   <div>
-    <article class="center cf pt2 pb1 mw6 word-wrap">
-        <h1 class="f2 mt0 title-font">
+    <article class="center cf pt2 pb1 mw8 word-wrap">
+        <a href="javascript:history.go(-1)">← back</a>
+        <h1 class="f2 mt4 mb4 title-font">
         {{ .Title }}
         </h1>
 
@@ -18,7 +19,7 @@
       </section>
       {{ partial "tags.html" . }}
       <time class="f7 pb1 dib mid-gray normal" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-        {{ .Date.Format ($.Param "date_format") }}
+          {{ .Date.Format ($.Param "date_format") }}
       </time>
       <div class="mt5"></div>
       {{ partial "graphcomment.html" . }}
