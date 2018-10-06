@@ -1,11 +1,11 @@
 {{ $featured_image := .Params.featured_image }}
-<article class="bb b--black-10 word-wrap pa2 mt2 mb4">
-    <div class="db pb4 {{ if .Params.featured_image }} pt3{{ end }} no-underline dark-gray">
+<article class="bb b--black-10 word-wrap pa4 mt2 mb4">
+    <div class="db pb4 no-underline dark-gray">
       <div class="flex flex-column">
         
         <div class="w-100">
           <a href="{{.URL}}" class="link hover-bg-moon-gray">
-            <h1 class="f4 title-font mv0 lh-title pt2">
+            <h1 class="f4 title-font mv0 lh-title pt0 mt0">
               {{ .Title }}
             </h1>
             <div class="{{ if .Params.featured_image }} mb3 mt3and5 {{ end }} w-100">
