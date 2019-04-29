@@ -4,26 +4,28 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="flex-l mt2 mw8 center"> 
+<div class="flex-l mt2 mw8 center">
   <div>
-      <a href="javascript:history.go(-1)">← back</a>
-      <article class="center cf pa4 mt3 pb1 mw8 word-wrap">
-        <time class="f7 pb1 dib mid-gray normal" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-            {{ .Date.Format ($.Param "date_format") }}
-        </time>
-        <h1 class="f2 mb4 mt1 title-font">
+    <a href="javascript:history.go(-1)">← back</a>
+    <article class="center cf word-wrap mt3">
+      <h1 class="f3 title-font pl4 pt4 pb3 mt2">
         {{ .Title }}
-        </h1>
+      </h1>
 
+      <div class="pa4 mw8 pt2">
+        <time class="f7 dib mid-gray normal" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+          {{ .Date.Format ($.Param "date_format") }}
+        </time>
         {{/* TODO: Add Hugo author  */}}
         {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
-      <section class="nested-copy-line-height lh-copy f5 nested-links nested-img dark-gray">
-        {{ .Content }}
-      </section>
-      {{ partial "tags.html" . }}
-      <div class="mt5"></div>
-      {{ partial "graphcomment.html" . }}
-      </article>
+        <section class="nested-copy-line-height lh-copy f5 nested-links nested-img dark-gray">
+          {{ .Content }}
+        </section>
+        {{ partial "tags.html" . }}
+        <div class="mt5"></div>
+        {{ partial "graphcomment.html" . }}
+      </div>
+    </article>
   </div>
 </div>
 {{ end }}

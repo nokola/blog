@@ -1,11 +1,11 @@
 baseURL = "https://systemfailure.io/"
 languageCode = "en-us"
-title = "SYSTEM FAILURE"
+title = "System Failure"
 theme = "ananke"
 
 [params]
     graphCommentId = "nokola-blog"
-    subtitle = "Working with humans. Product care. Coding."
+    subtitle = "Software for humans"
     featured_image = "header/tree1.jpg"
     body_classes = "body-font"
     date_format = "Jan 2, 2006"
