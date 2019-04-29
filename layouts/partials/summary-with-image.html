@@ -1,16 +1,26 @@
 {{ $featured_image := .Params.featured_image }}
 <article class="bb b--black-10 word-wrap">
-  <a href="{{.URL}}" class="main-link">
+  <a href="{{.RelPermalink}}" class="main-link">
     <h1 class="f4 title-font lh-title pl4 pt4 pb3 mb2 mt2">
       {{ .Title }}
     </h1>
     <span class="flex flex-column pa4 pb8 pt0">
 
       <span class="w-100">
-        {{ if .Date }}
-        <p class="f7 pt3 pb3 mv0 mid-gray">{{ .Date.Format ($.Param "date_format") }}
+        <p class="f7 pt3 pb3 mv0 mid-gray">
+          {{ if .Date }}
+          <span>{{ .Date.Format ($.Param "date_format") }}</span>
+          {{ end }}
+
+          {{ if .Params.categories }}
+          {{ range .Params.categories }}
+          <span class="ml2">
+            {{ . }}
+          </span>
+          {{- end -}}
+          {{- end -}}
         </p>
-        {{ end }}
+
         {{ if .Params.featured_image }}
         <span class="{{ if .Params.featured_image }} mb3 mt3and5 {{ end }} w-100">
           {{/* Trim slash, add absURL to ensure image works no matter where site is */}}

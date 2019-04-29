@@ -9,3 +9,6 @@ theme = "ananke"
     featured_image = "header/tree1.jpg"
     body_classes = "body-font"
     date_format = "Jan 2, 2006"
+
+[blackfriday]
+    hardLineBreak = true

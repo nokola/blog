@@ -13,9 +13,20 @@
       </h1>
 
       <div class="pa4 mw8 pt2">
-        <time class="f7 dib mid-gray normal" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-          {{ .Date.Format ($.Param "date_format") }}
-        </time>
+        <p class="f7 pt1 pb0 mv0 mid-gray">
+          {{ if .Date }}
+          <span>{{ .Date.Format ($.Param "date_format") }}</span>
+          {{ end }}
+
+          {{ if .Params.categories }}
+          {{ range .Params.categories }}
+          <span class="ml2">
+            {{ . }}
+          </span>
+          {{- end -}}
+          {{- end -}}
+        </p>
+
         {{/* TODO: Add Hugo author  */}}
         {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
         <section class="nested-copy-line-height lh-copy f5 nested-links nested-img dark-gray">
