@@ -8,7 +8,7 @@ categories:
 ---
 
 One thing can make or break a team. It's not mutual respect, neither communication.<!--more-->
-It's **having a common goal**. 
+It's **having a common goal**.
 
 The secondary element is having AMP:
 - Autonomy

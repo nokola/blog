@@ -10,5 +10,6 @@ theme = "ananke"
     body_classes = "body-font"
     date_format = "Jan 2, 2006"
 
+# https://gohugo.io/content-management/formats/#blackfriday-extensions
 [blackfriday]
-    hardLineBreak = true
+    extensions = ["hardLineBreak", "noEmptyLineBeforeBlock"]
