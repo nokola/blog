@@ -16,7 +16,7 @@ jobs:
           submodules: true
 
       - name: Deploy the site
-        uses: nokola/blog@master
+        uses: benmatselby/hugo-deploy-gh-pages@master
         env:
           HUGO_VERSION: 0.59.0
           TARGET_REPO: nokola/nokola.github.io
