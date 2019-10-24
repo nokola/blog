@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: hugo-deploy-gh-pages
-      uses: nokola/blog@master
+      uses: linuxsuren/surenpi@master
       env:
         GIT_DEPLOY_KEY: ${{ secrets.NOKOLA_BLOG_WRITE_KEY }}
         HUGO_VERSION: "0.59"
