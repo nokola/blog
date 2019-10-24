@@ -13,14 +13,8 @@ jobs:
       with:
         submodules: true
 
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2.2.2
-      with:
-        hugo-version: '0.59.0'
-        # extended: true
-
-    - name: Build
-      run: hugo --gc --minify
+    - name: build
+      uses: github-actions-x/hugo@master
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.5.0
