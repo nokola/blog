@@ -6,16 +6,25 @@ on:
       - master
 
 jobs:
-  hugo-deploy-gh-pages:
-    runs-on: ubuntu-latest
+  build-deploy:
+    runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@master
       with:
         submodules: true
-    - name: hugo-deploy-gh-pages
-      uses: linuxsuren/surenpi@master
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2.2.2
+      with:
+        hugo-version: '0.58.3'
+        # extended: true
+
+    - name: Build
+      run: hugo --gc --minify
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2.5.0
       env:
-        GIT_DEPLOY_KEY: ${{ secrets.NOKOLA_BLOG_WRITE_KEY }}
-        HUGO_VERSION: "0.59"
-        WEBSITE_GIT: "git@github.com:nokola/nokola.github.io.git"
-        WEBSITE_DIR: "public"
+        ACTIONS_DEPLOY_KEY: ${{ secrets.NOKOLA_BLOG_WRITE_KEY }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./public
