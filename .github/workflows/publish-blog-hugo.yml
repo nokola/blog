@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+      with:
+        submodules: true
     - name: hugo-deploy-gh-pages
       uses: linuxsuren/surenpi@master
       env:
