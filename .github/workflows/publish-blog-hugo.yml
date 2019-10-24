@@ -6,15 +6,14 @@ on:
       - master
 
 jobs:
-  build:
-    name: Deploy
+  hugo-deploy-gh-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-        with:
-          submodules: true
-
-      - uses: jsumners/gh-action-hugo-deploy@v1.0.0
-        with:
-          destination_repo: nokola/nokola.github.io
-          destination_token: ${{ secrets.NOKOLA_BLOG_WRITE_KEY }}
+    - uses: actions/checkout@master
+    - name: hugo-deploy-gh-pages
+      uses: nokola/blog@master
+      env:
+        GIT_DEPLOY_KEY: ${{ secrets.NOKOLA_BLOG_WRITE_KEY }}
+        HUGO_VERSION: "0.59"
+        WEBSITE_GIT: "git@github.com:nokola/nokola.github.io.git"
+        WEBSITE_DIR: "public"
