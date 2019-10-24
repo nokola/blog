@@ -27,6 +27,6 @@ jobs:
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.NOKOLA_BLOG_WRITE_KEY }}
         INPUT_KEEPFILES: true
-        PUBLISH_REPOSITORY: nokola/nokola.github.io
+        EXTERNAL_REPOSITORY: nokola/nokola.github.io
         PUBLISH_BRANCH: master
         PUBLISH_DIR: ./public
