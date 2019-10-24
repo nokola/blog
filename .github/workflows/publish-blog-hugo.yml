@@ -21,3 +21,4 @@ jobs:
           HUGO_VERSION: 0.59.0
           TARGET_REPO: nokola/nokola.github.io
           TOKEN: ${{ secrets.NOKOLA_BLOG_WRITE_KEY }}
+
