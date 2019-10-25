@@ -7,6 +7,9 @@ title = "Make a super-fast blog using Hugo+GitHub+online editor for free"
 ![](/uploads/reportCard.png)
 
 When your site starts responding in the sub-10 millisecond range, something magical happens. It's so fast, that it almost feels unreal.
+
+Total setup time: 0.5-1 days first time, maybe an hour or so afterwards.
+
 <!--more-->
 
 This is how I made [https://systemfailure.io](https://systemfailure.io "System Failure"):
