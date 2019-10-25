@@ -1,7 +1,7 @@
 +++
 date = "2019-10-23T07:00:00+00:00"
 featured_image = "uploads/reportCard.png"
-title = "How to make a super-fast blog using Hugo + GitHub and online editor for free"
+title = "Make a super-fast blog using Hugo+GitHub+online editor for free"
 
 +++
 ![](/uploads/reportCard.png)
