@@ -105,9 +105,12 @@
         text-decoration: none;
         box-shadow: 0 0 10px 3px rgba(0,0,0,.12);
       }
+      article img {
+        display: block;
+      }
     </style>
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
-    <main class="pb7 ph3 pt2 ph4-ns" role="main">
+    <main class="pb7 ph0 pt2 ph4-ns" role="main">
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}

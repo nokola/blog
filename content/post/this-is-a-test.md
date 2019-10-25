@@ -1,12 +1,13 @@
 +++
 date = "2019-10-23T07:00:00+00:00"
-featured_image = "uploads/reportCard.png"
+featured_image = ""
 title = "Make a super-fast blog using Hugo+GitHub+online editor for free"
 
 +++
 ![](/uploads/reportCard.png)
 
-When your site starts responding in the sub-10 millisecond range, something magical happens. It's so fast, that it almost feels unreal. 
+When your site starts responding in the sub-10 millisecond range, something magical happens. It's so fast, that it almost feels unreal.
+<!--more-->
 
 This is how I made [https://systemfailure.io](https://systemfailure.io "System Failure"):
 
@@ -41,12 +42,7 @@ Setup steps:
    1. [Sign up for GitHub actions](https://github.com/features/actions). 
    2. Add ssh deploy key ([instructions](https://github.com/peaceiris/actions-gh-pages#1-add-ssh-deploy-key)) and secret to allow GitHub Actions to publish to  nokola/blog -> nokola/nokola.github.io. I named my secret NOKOLA_BLOG_WRITE_KEY
    3. Add this settings file: [publish-blog-hugo.yml](https://github.com/nokola/blog/blob/master/.github/workflows/publish-blog-hugo.yml "https://github.com/nokola/blog/blob/master/.github/workflows/publish-blog-hugo.yml"), which explains the steps to publish blog --> nokola.github.io. Also references the above secret: NOKOLA_BLOG_WRITE_KEY
-
-   ***
-
    **At this point, you will have auto-buildable site** from nokola/blog to nokola/nokola.github.io!
-
-   ***
 4. Setup GitHub Pages to publish to systemfailure.io. Multiple steps here, see [https://pages.github.com/](https://pages.github.com/ "https://pages.github.com/")
 5. Sign up for free account on [forestry.io](https://forestry.io), import nokola/blog and start writing!
 
