@@ -1,6 +1,5 @@
 +++
 date = "2019-10-23T07:00:00+00:00"
-draft = true
 featured_image = "uploads/reportCard.png"
 title = "How to make a super-fast blog using Hugo + GitHub and online editor for free"
 
@@ -24,16 +23,26 @@ After all setup is done, the data flow looks like this:
                                    GitHub                 
                                    Actions                
                                    Autobuild               GitHub Pages   
-               Human saves blog    Using Hugo              Auto-publish 
+               Human saves blog    Using Hugo ~45sec       Auto-publish (10-30sec)
                      |               |                           |
     forestry editor --> nokola/blog --> nokola/nokola.github.io --> systemfailure.io
 
+The whole auto-publish takes about 1.5 minutes from clicking Save in Forestry to until the site is live.
+
 Setup steps:
 
-1. Use [Hugo](https://gohugo.io/) to bootstrap a blog on  in [nokola/blog](https://github.com/nokola/blog "https://github.com/nokola/blog"). Posts are in markdown.
+1. Use [Hugo](https://gohugo.io/) to bootstrap a blog on your repository (e.g. [nokola/blog](https://github.com/nokola/blog "https://github.com/nokola/blog")). Posts are in markdown.
 
    Hugo is the "world's fastest framework for building websites" according to their homepage.
-2. Build the site using [peaceiris/actions-hugo](https://github.com/peaceiris/actions-hugo "https://github.com/peaceiris/actions-hugo") into [nokola/nokola.github.io](https://github.com/nokola/nokola.github.io "https://github.com/nokola/nokola.github.io")
+2. Add a CNAME file in the static folder pointing to your final site, e.g. systemfailure.io. 
+
+   Example: [nokola/blog/static/CNAME](https://github.com/nokola/blog/blob/master/static/CNAME "https://github.com/nokola/blog/blob/master/static/CNAME")
+3. Build the site using [peaceiris/actions-hugo](https://github.com/peaceiris/actions-hugo "https://github.com/peaceiris/actions-hugo") into [nokola/nokola.github.io](https://github.com/nokola/nokola.github.io "https://github.com/nokola/nokola.github.io")
 
    See the build settings here: [publish-blog-hugo.yml](https://github.com/nokola/blog/blob/master/.github/workflows/publish-blog-hugo.yml "https://github.com/nokola/blog/blob/master/.github/workflows/publish-blog-hugo.yml")
-3. 
+4. Setup GitHub Pages to publish to systemfailure.io. Multiple steps here, see [https://pages.github.com/](https://pages.github.com/ "https://pages.github.com/")
+5. Sign up for free account on [forestry.io](https://forestry.io), import nokola/blog and start writing!
+
+Here's another useful benchmark across world severs: [https://performance.sucuri.net/domain/systemfailure.io](https://performance.sucuri.net/domain/systemfailure.io "https://performance.sucuri.net/domain/systemfailure.io")
+
+Enjoy!
