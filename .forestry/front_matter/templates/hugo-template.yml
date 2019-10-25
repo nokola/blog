@@ -11,5 +11,3 @@ fields:
 - type: text
   name: featured_image
   label: featured_image
-pages:
-- content/post/this-is-a-test.md
