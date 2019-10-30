@@ -1,20 +1,21 @@
 {{ $featured_image := .Params.featured_image }}
-<article class="bb b--black-10 word-wrap">
+<article class="summary-article bb b--black-10 word-wrap">
+  <div class="gradient-top"></div>
   <a href="{{.RelPermalink}}" class="main-link">
-    <h1 class="f4 title-font lh-title ph4 pv4 mb2 mt2">
+    <h1 class="f4 title-font lh-title ph4 pt3 mt3">
       {{ .Title }}
     </h1>
-    <span class="flex flex-column pa4 pb8 pt0">
+    <span class="flex flex-column pa4 pb4 pt0">
 
       <span class="w-100">
-        <p class="f7 pt3 pb3 mv0 mid-gray">
-          {{ if .Date }}
+        <p class="f7 pt0 pb3 mv0 silver">
+          <!-- {{ if .Date }}
           <span>{{ .Date.Format ($.Param "date_format") }}</span>
-          {{ end }}
+          {{ end }} -->
 
           {{ if .Params.categories }}
           {{ range .Params.categories }}
-          <span class="ml2">
+          <span class="mr2">
             {{ . }}
           </span>
           {{- end -}}
@@ -34,7 +35,7 @@
         </span>
         <div>
           <span
-            class="dib bg-moon-gray br--top br--right f7 hover-bg-light-silver link mt2 ph3 pv2">{{$.Param "read_more_copy" | default "read more >" }}</span>
+            class="f6 link dim br1 ph3 pv2 mt4 mb2 dib white bg-dark-gray">{{$.Param "read_more_copy" | default "more ›" }}</span>
         </div>
       </span>
     </span>

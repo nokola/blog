@@ -6,14 +6,15 @@
 {{ define "main" }}
 <div class="flex-l mt2 mw8 center">
   <div>
-    <a href="javascript:history.go(-1)">← back</a>
-    <article class="center cf word-wrap mt3">
-      <h1 class="f3 title-font ph4 pv4 mt2">
+    <!-- <a href="javascript:history.go(-1)">&lt; back</a> -->
+    <article class="center cf word-wrap">
+      <div class="gradient-top single"></div>
+      <h1 class="f3 title-font ph4 pt3 mt3">
         {{ .Title }}
       </h1>
 
-      <div class="pa4 mw8 pt2">
-        <p class="f7 pt1 pb0 mv0 mid-gray">
+      <div class="pa4 mw8 pt0">
+        <p class="f7 pt1 pb3 silver">
           {{ if .Date }}
           <span>{{ .Date.Format ($.Param "date_format") }}</span>
           {{ end }}
@@ -29,7 +30,7 @@
 
         {{/* TODO: Add Hugo author  */}}
         {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
-        <section class="nested-copy-line-height lh-copy f5 nested-links nested-img dark-gray">
+        <section class="nested-copy-line-height lh-copy f5 nested-links nested-img light-gray">
           {{ .Content }}
         </section>
         {{ partial "tags.html" . }}

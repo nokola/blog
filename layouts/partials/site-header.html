@@ -2,7 +2,7 @@
 {{ if $featured_image }}
   {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
   {{ $featured_image := (trim $featured_image "/") | absURL }}
-  <header class="cover bg-top bg-left shadow-bottom" style="background-image: url('{{ $featured_image }}');">
+  <header class="mb5 cover bg-top bg-left shadow-bottom" style="background-image: url('{{ $featured_image }}');">
     <div>
       {{ partial "site-navigation.html" .}}
     </div>
