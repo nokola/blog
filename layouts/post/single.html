@@ -5,15 +5,16 @@
 
 {{ define "main" }}
 <div class="flex-l mt2 mw8 center">
+  <!-- {{ .UniqueID }} -->
   <div>
     <!-- <a href="javascript:history.go(-1)">&lt; back</a> -->
     <article class="center cf word-wrap">
       <div class="gradient-top single"></div>
-      <h1 class="f3 title-font ph4 pt3 mt3">
+      <h1 class="f3 title-font ph4-ns ph3 pt3 mt3">
         {{ .Title }}
       </h1>
 
-      <div class="pa4 mw8 pt0">
+      <div class="pa4-ns mw8 pt0 pa3">
         <p class="f7 pt1 pb3 silver">
           {{ if .Date }}
           <span>{{ .Date.Format ($.Param "date_format") }}</span>
