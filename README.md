@@ -8,4 +8,4 @@ To start:
 
 For styling use https://tachyons.io.
 
-Using themes/ananke@6ff8e533007b2d8606c8ad5a2d53abcbf68026d5 as base
+Using https://github.com/budparr/gohugo-theme-ananke/commit/6ff8e533007b2d8606c8ad5a2d53abcbf68026d5 in themes/ananke as base
