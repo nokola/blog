@@ -4,8 +4,8 @@ To start:
 1. Install Hugo https://github.com/gohugoio/hugo/releases
 2. Clone this repo
 3. To test: ```serve.bat```
-4. To publish: ```pub.bat "Blog update message"```
+4. To publish: check-in. GitHub Actions will auto-build and publish
 
 For styling use https://tachyons.io.
 
-Minor CSS updates in ```layouts/_default/baseof.html```.
+Using themes/ananke@6ff8e533007b2d8606c8ad5a2d53abcbf68026d5 as base
