@@ -16,16 +16,15 @@ This is how I made [https://systemfailure.io](https://systemfailure.io "System F
 
 The general idea:
 
-1. Use [GitHub](https://github.com) for storing all files in [nokola/blog](https://github.com/nokola/blog "https://github.com/nokola/blog")
-2. Use [Hugo](https://gohugo.io/) for building the static site from [nokola/blog](https://github.com/nokola/blog "https://github.com/nokola/blog") to [nokola/nokola.github.io](https://github.com/nokola/nokola.github.io "https://github.com/nokola/nokola.github.io")
+1. Use [GitHub](https://github.com) for storing all blog markdown and theme files in [nokola/blog](https://github.com/nokola/blog "https://github.com/nokola/blog")
+2. Use GitHub actions to [Hugo](https://gohugo.io/)-build the static site from [nokola/blog](https://github.com/nokola/blog "https://github.com/nokola/blog") to [nokola/nokola.github.io](https://github.com/nokola/nokola.github.io "https://github.com/nokola/nokola.github.io")
 3. Use GitHub Pages to specify that [nokola/nokola.github.io](https://github.com/nokola/nokola.github.io "https://github.com/nokola/nokola.github.io") will publish on [https://systemfailure.io](https://systemfailure.io)
-4. Use [Forestry.io](https://forestry.io)
+4. Use [Forestry.io](https://forestry.io) for online editing of the markdown. Saves to GitHub nokola/blog directly.
 5. Test the final speed using [https://testmysite.io/](https://testmysite.io/ "https://testmysite.io/"), rejoice, and gloat (FYI: it's faster than Netlify, the leading speed provider.)
 
 After all setup is done, the data flow looks like this:
 
-                                   GitHub                 
-                                   Actions                
+                                   GitHub Actions               
                                    Autobuild               GitHub Pages   
                Human saves blog    Using Hugo ~45sec       Auto-publish (10-30sec)
                      |               |                           |
@@ -41,16 +40,33 @@ Setup steps:
 
    Example: [nokola/blog/static/CNAME](https://github.com/nokola/blog/blob/master/static/CNAME "https://github.com/nokola/blog/blob/master/static/CNAME")
 3. Build the site using [peaceiris/actions-hugo](https://github.com/peaceiris/actions-hugo "https://github.com/peaceiris/actions-hugo") into [nokola/nokola.github.io](https://github.com/nokola/nokola.github.io "https://github.com/nokola/nokola.github.io"):
-
-   a. [Sign up for GitHub actions](https://github.com/features/actions).
-
-   b. Add ssh deploy key ([instructions](https://github.com/peaceiris/actions-gh-pages#1-add-ssh-deploy-key)) and secret to allow GitHub Actions to publish to  nokola/blog -> nokola/nokola.github.io. I named my secret NOKOLA_BLOG_WRITE_KEY
-
-   c. Add this settings file: [publish-blog-hugo.yml](https://github.com/nokola/blog/blob/master/.github/workflows/publish-blog-hugo.yml "https://github.com/nokola/blog/blob/master/.github/workflows/publish-blog-hugo.yml"), which explains the steps to publish blog --> nokola.github.io. Also references the above secret: NOKOLA_BLOG_WRITE_KEY
+   - [Sign up for GitHub actions](https://github.com/features/actions).
+   - Add ssh deploy key ([instructions](https://github.com/peaceiris/actions-gh-pages#1-add-ssh-deploy-key)) and secret to allow GitHub Actions to publish to  nokola/blog -> nokola/nokola.github.io. I named my secret NOKOLA_BLOG_WRITE_KEY
+   - Add this settings file: [publish-blog-hugo.yml](https://github.com/nokola/blog/blob/master/.github/workflows/publish-blog-hugo.yml "https://github.com/nokola/blog/blob/master/.github/workflows/publish-blog-hugo.yml"), which explains the steps to publish blog --> nokola.github.io. Also references the above secret: NOKOLA_BLOG_WRITE_KEY
    **At this point, you will have auto-buildable site** from nokola/blog to nokola/nokola.github.io!
 4. Setup GitHub Pages to publish to systemfailure.io. Multiple steps here, see [https://pages.github.com/](https://pages.github.com/ "https://pages.github.com/")
 5. Sign up for free account on [forestry.io](https://forestry.io), import nokola/blog and start writing!
 
 Here's another useful benchmark across world severs: [https://performance.sucuri.net/domain/systemfailure.io](https://performance.sucuri.net/domain/systemfailure.io "https://performance.sucuri.net/domain/systemfailure.io")
+
+**Bonus:** setup comments in < 5 min using https://utteranc.es. 
+Utteranc.es is a lightweight comments widget built on GitHub issues.
+Here's the code I copy-pasted to add comments to my blog, also see [commit](https://github.com/nokola/blog/commit/d8c2d9307893e85694f44af5322eb1223b4a9b0c):
+```
+<script src="https://utteranc.es/client.js"
+    repo="nokola/blog"
+    issue-term="pathname"
+    label="comment"
+    theme="github-dark"
+    crossorigin="anonymous"
+    async>
+</script>
+```
+Then I added this .css:
+```
+.utterances {
+    margin-left: 0;
+}
+```
 
 Enjoy!
