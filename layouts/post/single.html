@@ -14,7 +14,7 @@
         {{ .Title }}
       </h1>
 
-      <div class="pa4-ns mw8 pt0 pa3">
+      <div class="ph4-ns mw8 ph3 pb2">
         <p class="f7 pt1 pb3 silver">
           {{ if .Date }}
           <span>{{ .Date.Format ($.Param "date_format") }}</span>
@@ -36,7 +36,14 @@
         </section>
         {{ partial "tags.html" . }}
         <div class="mt5"></div>
-        {{ partial "graphcomment.html" . }}
+        <script src="https://utteranc.es/client.js"
+          repo="nokola/blog"
+          issue-term="pathname"
+          label="comment"
+          theme="github-dark"
+          crossorigin="anonymous"
+          async>
+        </script>
       </div>
     </article>
   </div>

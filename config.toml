@@ -4,12 +4,11 @@ title = "System Failure"
 theme = "ananke"
 
 [params]
-    graphCommentId = "nokola-blog"
-    subtitle = "Nokola's handwritten blog on software and humans."
-    featured_image = "header/tree1.jpg"
-    body_classes = "body-font"
-    date_format = "Jan 2, 2006"
+subtitle = "Nokola's handwritten blog on software and humans."
+featured_image = "header/tree1.jpg"
+body_classes = "body-font"
+date_format = "Jan 2, 2006"
 
 # https://gohugo.io/content-management/formats/#blackfriday-extensions
 [blackfriday]
-    extensions = ["hardLineBreak", "noEmptyLineBeforeBlock"]
+extensions = ["hardLineBreak", "noEmptyLineBeforeBlock"]
