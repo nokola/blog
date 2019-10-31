@@ -52,7 +52,7 @@ Here's another useful benchmark across world severs: [https://performance.sucuri
 **Bonus:** setup comments in < 5 min using https://utteranc.es. 
 Utteranc.es is a lightweight comments widget built on GitHub issues.
 Here's the code I copy-pasted to add comments to my blog, also see [commit](https://github.com/nokola/blog/commit/d8c2d9307893e85694f44af5322eb1223b4a9b0c):
-```
+```html
 <script src="https://utteranc.es/client.js"
     repo="nokola/blog"
     issue-term="pathname"
@@ -63,7 +63,7 @@ Here's the code I copy-pasted to add comments to my blog, also see [commit](http
 </script>
 ```
 Then I added this .css:
-```
+```css
 .utterances {
     margin-left: 0;
 }

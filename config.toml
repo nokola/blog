@@ -2,6 +2,7 @@ baseURL = "https://systemfailure.io/"
 languageCode = "en-us"
 title = "System Failure"
 theme = "ananke"
+pygmentsCodeFences = true
 
 [params]
 subtitle = "Nokola's handwritten blog on software and humans."
