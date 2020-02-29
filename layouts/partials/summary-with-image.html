@@ -5,7 +5,7 @@
     <h1 class="f4 title-font lh-title ph4 pt3 mt3">
       {{ .Title }}
     </h1>
-    <span class="flex flex-column pa4 pb4 pt0">
+    <span class="flex flex-column pa4 pb0 pt0">
 
       <span class="w-100">
         <p class="f7 pt0 pb3 mv0 silver">
@@ -22,7 +22,7 @@
           {{- end -}}
         </p>
 
-        {{ if .Params.featured_image }}
+        <!-- {{ if .Params.featured_image }}
         <span class="{{ if .Params.featured_image }} mb3 mt3and5 {{ end }} w-100">
           {{/* Trim slash, add absURL to ensure image works no matter where site is */}}
           {{ $featured_image := (trim $featured_image "/") | absURL }}
@@ -36,7 +36,7 @@
         <div>
           <span
             class="f6 link dim br1 ph3 pv2 mt4 mb2 dib white bg-dark-gray">{{$.Param "read_more_copy" | default "more ›" }}</span>
-        </div>
+        </div> -->
       </span>
     </span>
   </a>
