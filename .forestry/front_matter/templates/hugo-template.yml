@@ -11,3 +11,5 @@ fields:
 - type: text
   name: featured_image
   label: featured_image
+pages:
+- content/post/new-fast-and-easy-layout-system.md
